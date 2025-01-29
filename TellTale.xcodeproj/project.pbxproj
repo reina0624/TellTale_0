@@ -16,6 +16,9 @@
 		37C0DDBE2D40FCC400DDB4A5 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */; };
 		37C0DDC02D4109C500DDB4A5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */; };
 		37C0DDC22D410C7400DDB4A5 /* WrittingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */; };
+		37C0DDC42D4F69F300DDB4A5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */; };
+		37C0DDC92D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */; };
+		37C0DDCA2D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittingViewController.swift; sourceTree = "<group>"; };
+		37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCustomTableViewCell.swift; sourceTree = "<group>"; };
+		37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */,
 				37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */,
 				37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */,
+				37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */,
+				37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */,
+				37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */,
 			);
 			path = TellTale;
 			sourceTree = "<group>";
@@ -135,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C0DDAF2D40F56E00DDB4A5 /* Assets.xcassets in Resources */,
+				37C0DDCA2D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib in Resources */,
 				37C0DDB22D40F56E00DDB4A5 /* Base in Resources */,
 				37C0DDAD2D40F56D00DDB4A5 /* Base in Resources */,
 			);
@@ -150,7 +160,9 @@
 				37C0DDC22D410C7400DDB4A5 /* WrittingViewController.swift in Sources */,
 				37C0DDC02D4109C500DDB4A5 /* StartViewController.swift in Sources */,
 				37C0DDAA2D40F56D00DDB4A5 /* ViewController.swift in Sources */,
+				37C0DDC42D4F69F300DDB4A5 /* CustomTableViewCell.swift in Sources */,
 				37C0DDBE2D40FCC400DDB4A5 /* PeopleViewController.swift in Sources */,
+				37C0DDC92D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift in Sources */,
 				37C0DDA62D40F56D00DDB4A5 /* AppDelegate.swift in Sources */,
 				37C0DDA82D40F56D00DDB4A5 /* SceneDelegate.swift in Sources */,
 			);

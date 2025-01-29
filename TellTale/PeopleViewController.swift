@@ -11,48 +11,40 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     @IBOutlet var peopleTitleLabel: UILabel!
     @IBOutlet var peopleCountLabel: UILabel!
-    @IBOutlet var plusButton: UIButton!
-    @IBOutlet var miuusButton: UIButton!
     @IBOutlet var peopleTable: UITableView!
+
     
     var peoplenumber: Int = 0
     //numberの名称変更につき、エラーの可能性あり。要注意。
     
-    var playerArray: [String] = []
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+     var playerArray: [String] = Array(repeating: "", count: 20)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         peopleTable.dataSource = self
         peopleTable.delegate = self
+        peopleTable.register(UINib(nibName: "PeopleCustomTableViewCell", bundle: nil),forCellReuseIdentifier: "PeopleCell")
+
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func tuppedplusButton() {
-        if peoplenumber == 20 {
-            peoplenumber = peoplenumber + 0
-        } else {
-            peoplenumber = peoplenumber + 1
-        }
-        
-        peopleCountLabel.text = String(peoplenumber)
-        peopleTable.reloadData()
-        
+    @IBAction func plusButton() {
+        peoplenumber = min(peoplenumber + 1, 20)
+        updatePeopleCount()
+
     }
-    @IBAction func tuppedminusButton() {
-        if peoplenumber == 0 {
-            peoplenumber = peoplenumber + 0
-        }
-        else{
-            peoplenumber = peoplenumber - 1
-        }
+    @IBAction func minusButton() {
+        peoplenumber = max(peoplenumber - 1, 0)
+        updatePeopleCount()
+    }
+    func updatePeopleCount() {
         peopleCountLabel.text = String(peoplenumber)
         peopleTable.reloadData()
     }
+
 
     
     //MARK: セルの数
@@ -61,11 +53,21 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        
-        cell?.textLabel?.text = playerArray[indexPath.row]
-        
-        return cell!
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as? PeopleCustomTableViewCell {
+            
+            cell.playerTextField.text = playerArray[indexPath.row]
+            cell.playerTextField.placeholder = "Player \(indexPath.row + 1)"
+            
+            cell.onNameChanged = { [weak self] name in
+                self?.playerArray[indexPath.row] = name
+            }
+
+            return cell
+        } else {
+            // セルの取得に失敗した場合の処理
+            return UITableViewCell() // 必要に応じて適切なセルを返す
+        }
+
     }
     
     @IBAction func peopleCancelButton() {
