@@ -23,7 +23,6 @@ class PeopleCustomTableViewCell: UITableViewCell,UITextFieldDelegate {
         onNameChanged?(textField.text ?? "")
     }
 
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

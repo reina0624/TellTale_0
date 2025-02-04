@@ -13,7 +13,6 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet var peopleCountLabel: UILabel!
     @IBOutlet var peopleTable: UITableView!
 
-    
     var peoplenumber: Int = 0
     //numberの名称変更につき、エラーの可能性あり。要注意。
     
