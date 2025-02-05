@@ -161,7 +161,6 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="NextButton" destination="KEh-yd-e6d" id="DDL-ey-60H"/>
                         <outlet property="peopleCountLabel" destination="9vq-lH-UZw" id="oRp-rO-Atn"/>
                         <outlet property="peopleTable" destination="1ca-hn-otw" id="ETg-As-FWu"/>
                         <outlet property="peopleTitleLabel" destination="Cno-co-dHH" id="a7q-Ds-Aze"/>
