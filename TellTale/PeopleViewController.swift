@@ -74,15 +74,12 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
         
         //        self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func changeScreenToStartButton() {
-        self.performSegue(withIdentifier: "toStart", sender: self)
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStart" {
             let StartViewController = segue.destination as! StartViewController
             StartViewController.peoplenumber = peoplenumber
+
         }
     }
 

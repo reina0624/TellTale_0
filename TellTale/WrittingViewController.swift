@@ -74,7 +74,7 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
                 // 終わり
                 self.saveData.set(self.novelArray, forKey: "writtentext")
                 //画面遷移
-                self.performSegue(withIdentifier: "tolast", sender: nil)
+                self.performSegue(withIdentifier: "toconnect", sender: nil)
             }
             alert.addAction(defaultAction)
             present(alert, animated: true, completion: nil)

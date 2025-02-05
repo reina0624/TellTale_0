@@ -8,15 +8,16 @@
 import UIKit
 
 class StartViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    @IBOutlet var StartButton :UIButton!
     
     var pickerdata: String!
     
     var peoplenumber: Int = 0
+
     //これは元々number表記だったが、peopleviewconのpeoplenumber(元number)と同一と見做し一度変化させたがワンチャン違う。要注意。
     var saveData: UserDefaults = UserDefaults.standard
     
     @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var startButton: UIButton!
     
     let dataList = ["恋愛","友情","ホラー","ミステリー","グロ","百合"]
 
@@ -47,6 +48,7 @@ class StartViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
         if segue.identifier == "toWriteNovel" {
             let WrittingViewController = segue.destination as! WrittingViewController
             WrittingViewController.peoplenumber = peoplenumber
+
             saveData.set(self.pickerdata, forKey: "themedata")
             
             
