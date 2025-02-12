@@ -11,9 +11,9 @@ class ConnectViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var connectTextView:UITextView!
     @IBOutlet weak var titleTextField: UITextField!
-
+    
     var saveData: UserDefaults = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +24,18 @@ class ConnectViewController: UIViewController,UITextFieldDelegate {
         print(a)
         //print(saveData.object(forKey: "writtentext") )
         connectTextView.text = a.joined(separator: "\n")
-
-
+        
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func savenovel(_ sender:Any) {
         connectTextView.text = saveData.object(forKey: "noveltext") as? String
-        saveData.set(titleTextField.text, forKey: "title")
+       saveData.set(titleTextField.text, forKey: "title")
         saveData.set(connectTextView.text, forKey: "noveltext")
+      //  let novel:[String?] = [connectTextView.text,titleTextField.text]
+       // saveData.set(novel, forKey: "novel")
+        //教科書CollectionView1の内容　使うかもしれない
+
         
         let alert:UIAlertController = UIAlertController(title: "保存", message: "小説の保存が完了しました。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
@@ -58,17 +62,17 @@ class ConnectViewController: UIViewController,UITextFieldDelegate {
         present(alert2, animated: true, completion: nil)
         
     }
-
     
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

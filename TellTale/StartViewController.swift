@@ -11,8 +11,6 @@ class StartViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
     
     var pickerdata: String!
     
-    var peoplenumber: Int = 0
-
     //これは元々number表記だったが、peopleviewconのpeoplenumber(元number)と同一と見做し一度変化させたがワンチャン違う。要注意。
     var saveData: UserDefaults = UserDefaults.standard
     
@@ -47,8 +45,6 @@ class StartViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWriteNovel" {
             let WrittingViewController = segue.destination as! WrittingViewController
-            WrittingViewController.peoplenumber = peoplenumber
-
             saveData.set(self.pickerdata, forKey: "themedata")
             
             

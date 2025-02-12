@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3774726E2D5368B600EF7EDD /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774726D2D5368B600EF7EDD /* ConnectViewController.swift */; };
+		377472752D5CACF500EF7EDD /* EditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377472732D5CACF500EF7EDD /* EditorTableViewCell.swift */; };
+		377472762D5CACF500EF7EDD /* EditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377472742D5CACF500EF7EDD /* EditorTableViewCell.xib */; };
 		37C0DDA62D40F56D00DDB4A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDA52D40F56D00DDB4A5 /* AppDelegate.swift */; };
 		37C0DDA82D40F56D00DDB4A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDA72D40F56D00DDB4A5 /* SceneDelegate.swift */; };
 		37C0DDAA2D40F56D00DDB4A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDA92D40F56D00DDB4A5 /* ViewController.swift */; };
@@ -17,13 +19,14 @@
 		37C0DDBE2D40FCC400DDB4A5 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */; };
 		37C0DDC02D4109C500DDB4A5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */; };
 		37C0DDC22D410C7400DDB4A5 /* WrittingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */; };
-		37C0DDC42D4F69F300DDB4A5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */; };
 		37C0DDC92D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */; };
 		37C0DDCA2D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3774726D2D5368B600EF7EDD /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		377472732D5CACF500EF7EDD /* EditorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTableViewCell.swift; sourceTree = "<group>"; };
+		377472742D5CACF500EF7EDD /* EditorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorTableViewCell.xib; sourceTree = "<group>"; };
 		37C0DDA22D40F56D00DDB4A5 /* TellTale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TellTale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C0DDA52D40F56D00DDB4A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C0DDA72D40F56D00DDB4A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittingViewController.swift; sourceTree = "<group>"; };
-		37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCustomTableViewCell.swift; sourceTree = "<group>"; };
 		37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,12 +80,13 @@
 				37C0DDB02D40F56E00DDB4A5 /* LaunchScreen.storyboard */,
 				37C0DDB32D40F56E00DDB4A5 /* Info.plist */,
 				37C0DDBD2D40FCC400DDB4A5 /* PeopleViewController.swift */,
-				37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */,
-				37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */,
 				37C0DDBF2D4109C500DDB4A5 /* StartViewController.swift */,
 				37C0DDC12D410C7400DDB4A5 /* WrittingViewController.swift */,
-				37C0DDC32D4F69F300DDB4A5 /* CustomTableViewCell.swift */,
 				3774726D2D5368B600EF7EDD /* ConnectViewController.swift */,
+				37C0DDC72D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift */,
+				37C0DDC82D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib */,
+				377472732D5CACF500EF7EDD /* EditorTableViewCell.swift */,
+				377472742D5CACF500EF7EDD /* EditorTableViewCell.xib */,
 			);
 			path = TellTale;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				37C0DDAF2D40F56E00DDB4A5 /* Assets.xcassets in Resources */,
 				37C0DDCA2D5266F700DDB4A5 /* PeopleCustomTableViewCell.xib in Resources */,
 				37C0DDB22D40F56E00DDB4A5 /* Base in Resources */,
+				377472762D5CACF500EF7EDD /* EditorTableViewCell.xib in Resources */,
 				37C0DDAD2D40F56D00DDB4A5 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,8 +167,8 @@
 				37C0DDC22D410C7400DDB4A5 /* WrittingViewController.swift in Sources */,
 				37C0DDC02D4109C500DDB4A5 /* StartViewController.swift in Sources */,
 				37C0DDAA2D40F56D00DDB4A5 /* ViewController.swift in Sources */,
-				37C0DDC42D4F69F300DDB4A5 /* CustomTableViewCell.swift in Sources */,
 				37C0DDBE2D40FCC400DDB4A5 /* PeopleViewController.swift in Sources */,
+				377472752D5CACF500EF7EDD /* EditorTableViewCell.swift in Sources */,
 				37C0DDC92D5266F700DDB4A5 /* PeopleCustomTableViewCell.swift in Sources */,
 				3774726E2D5368B600EF7EDD /* ConnectViewController.swift in Sources */,
 				37C0DDA62D40F56D00DDB4A5 /* AppDelegate.swift in Sources */,
