@@ -83,7 +83,8 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
                 if let text = cell.peacetextview.text {
                     novelArray.append(text)
                 }
-            }            
+                
+            }
             let novelsavealert: UIAlertController = UIAlertController(title: "完了", message: "保存が完了します。", preferredStyle: .alert)
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default){ (action) in
                 print("OK")

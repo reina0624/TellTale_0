@@ -28,6 +28,7 @@ class ConnectViewController: UIViewController,UITextFieldDelegate {
         
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func savenovel(_ sender:Any) {
         connectTextView.text = saveData.object(forKey: "noveltext") as? String
        saveData.set(titleTextField.text, forKey: "title")

@@ -10,6 +10,8 @@ import UIKit
 class EditorTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet var peacetextview: UITextView!
 
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

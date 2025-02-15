@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" constant="361" id="hsL-rb-wPW"/>
                         </constraints>
                         <color key="textColor" systemColor="labelColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>

@@ -11,6 +11,7 @@ class StartViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
     
     var pickerdata: String!
     
+    
     //これは元々number表記だったが、peopleviewconのpeoplenumber(元number)と同一と見做し一度変化させたがワンチャン違う。要注意。
     var saveData: UserDefaults = UserDefaults.standard
     
