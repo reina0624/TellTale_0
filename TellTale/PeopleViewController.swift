@@ -79,8 +79,11 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStart" {
+            peopleTable.endEditing(true)
             _ = segue.destination as! StartViewController
             saveData.set(playerArray, forKey: "people")
+            saveData.set(peoplenumber, forKey: "peoplenumber")
+
         }
     }
     

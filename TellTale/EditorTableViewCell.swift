@@ -9,12 +9,11 @@ import UIKit
 
 class EditorTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet var peacetextview: UITextView!
-
     
-    
-
+    var onTextChanged: ((String) -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
         peacetextview.delegate = self
         peacetextview.font = UIFont.systemFont(ofSize: 16) // フォント設定
@@ -27,17 +26,18 @@ class EditorTableViewCell: UITableViewCell, UITextViewDelegate {
 
         // Configure the view for the selected state
     }
-    func setEditable(_ editable: Bool) {
-            peacetextview.isEditable = editable
-        }
     func textViewDidChange(_ textView: UITextView) {
             // 必要に応じて入力が変わるたびに処理を追加することができます
             print("Text changed: \(textView.text ?? "")")
+        }
+    func setEditable(_ editable: Bool) {
+            peacetextview.isEditable = editable
         }
 
         // 編集終了時に呼ばれるメソッド
         func textViewDidEndEditing(_ textView: UITextView) {
             // 編集終了後にデータを保存する処理を追加する場合に活用できます
+            onTextChanged?(textView.text ?? "")
             print("Editing ended for cell")
         }
     }

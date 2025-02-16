@@ -21,7 +21,10 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
     var novelArray: [String] = []
     var saveData: UserDefaults = UserDefaults.standard
     var playerArray: [String] = []
-    
+    func peoplenumber() -> Int {
+        return saveData.integer(forKey: "peoplenumber")
+    }
+
     var tappedagain: Bool = true
     // var themeoriginArray: [String] = []
     //  var countArray: [String] = []
@@ -33,11 +36,10 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
             playerArray = savedPlayers
         }
         
-        writtingtable.register(UINib(nibName: "EditorTableViewCell", bundle: nil), forCellReuseIdentifier: "writecell")
-        writtingtable.rowHeight = 224
         writtingtable.dataSource = self
         writtingtable.delegate = self
-
+        writtingtable.register(UINib(nibName: "EditorTableViewCell", bundle: nil), forCellReuseIdentifier: "writecell")
+        writtingtable.rowHeight = 224
         
         if playerArray.indices.contains(index) {
             turnlabel.text = "\(playerArray[index])の番です！"
@@ -48,27 +50,40 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
         
         tappedagain = false
         
+        writtingtable.reloadData()
+        
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return novelArray.count
+        return novelArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "writecell", for: indexPath) as! EditorTableViewCell
-        if novelArray.indices.contains(indexPath.row) {
-            cell.peacetextview.text = novelArray[indexPath.row]
-        } else {
-            cell.peacetextview.text = ""
-        }
-        if index == indexPath.row {
-            cell.setEditable(true)
-        } else {
-            cell.setEditable(false)
-        }
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "writecell", for: indexPath) as? EditorTableViewCell{
+            
+            if !novelArray.isEmpty {
+                cell.peacetextview.text = novelArray[indexPath.row]
+                cell.onTextChanged = { [weak self] name in self?.novelArray[indexPath.row] = name
+                }
+            } else {
+                cell.peacetextview.text = ""
+                cell.onTextChanged = { [weak self] name in self?.novelArray.append(name)
+                }
+            }
+            
+            if index == indexPath.row {
+                cell.setEditable(true)
+            } else {
+                cell.setEditable(false)
+            }
 
-        return cell
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+        
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 224
@@ -76,7 +91,7 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
     
     @IBAction func WroteButton (_ sender:Any){
         
-        if index + 1 < playerArray.count {
+        if index + 1 < peoplenumber() {
             index += 1
             turnlabel.text = "\(playerArray[index])の番です！"
             if let cell = writtingtable.cellForRow(at: IndexPath(row: index, section: 0)) as? EditorTableViewCell {
