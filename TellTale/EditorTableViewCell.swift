@@ -33,7 +33,6 @@ class EditorTableViewCell: UITableViewCell, UITextViewDelegate {
     func setEditable(_ editable: Bool) {
             peacetextview.isEditable = editable
         }
-
         // 編集終了時に呼ばれるメソッド
         func textViewDidEndEditing(_ textView: UITextView) {
             // 編集終了後にデータを保存する処理を追加する場合に活用できます

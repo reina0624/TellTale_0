@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="262" height="48"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJz-f0-Ify">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player01" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJz-f0-Ify">
                         <rect key="frame" x="7" y="10" width="248" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <textInputTraits key="textInputTraits"/>

@@ -37,7 +37,6 @@ class ConnectViewController: UIViewController,UITextFieldDelegate {
        // saveData.set(novel, forKey: "novel")
         //教科書CollectionView1の内容　使うかもしれない
 
-        
         let alert:UIAlertController = UIAlertController(title: "保存", message: "小説の保存が完了しました。", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
             self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)

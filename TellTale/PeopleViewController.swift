@@ -63,6 +63,7 @@ class PeopleViewController: UIViewController,UITableViewDataSource, UITableViewD
                 self?.playerArray[indexPath.row] = name
             }
             
+            
             return cell
         } else {
             // セルの取得に失敗した場合の処理

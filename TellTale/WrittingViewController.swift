@@ -15,7 +15,6 @@ class WrittingViewController: UIViewController,UITableViewDataSource,UITableView
     @IBOutlet var turnlabel: UILabel!
     @IBOutlet var themelabel: UILabel!
 
-    
     var index: Int = 0
     
     var novelArray: [String] = []
